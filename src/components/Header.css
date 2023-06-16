@@ -1,0 +1,36 @@
+.navbar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+
+.navbar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar .a:hover {
+
+}
+
+.navbar div:last-child a{
+    position: relative;
+    left: 70%;
+    overflow: auto;
+}
+
+
+@media screen and (max-width: 768px){ 
+    .navbar a {
+        float: none;
+        display: block;
+    }
+
+    .navbar div:last-child a {
+        position: static;
+    }
+}
