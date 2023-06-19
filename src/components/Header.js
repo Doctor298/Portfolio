@@ -8,6 +8,7 @@ import {
     faGithub
 } from '@fortawesome/free-brands-svg-icons';
 
+import {Routes, Route, Link} from 'react-router-dom';
 
 const socials = [
     {
@@ -32,6 +33,17 @@ const socials = [
     },
   ];
 
+const handleCLick = function(anchor) {
+  const id = `${anchor}-section`;
+  const element = document.getElementById(id);
+  if(element) {
+    element.scrollIntoView({
+      behavior:"smooth",
+      block:"start",
+    });
+  }
+};
+
 function Header() {
     return (
         <nav className = "navbar">
@@ -45,8 +57,8 @@ function Header() {
                 }
             </div>
             <div>
-                <a href='index.html'>Sections</a>
-                <a href='#'>Contact Me</a>
+                <a href='#projects' onClick={handleCLick}>Projects</a>
+                <a href='#contact-me' onClick={handleCLick}>Contact Me</a>
             </div>
         </nav>
     );
